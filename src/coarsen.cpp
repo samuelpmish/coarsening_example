@@ -77,8 +77,6 @@ triangle_mesh coarsen_by_color(const triangle_mesh & fine,
     }
   }
 
-  write_binary(new_ids, "__new_ids.bin");
-
   for (int v = 0; v < num_vertices; v++) {
     int id = v;
     while (new_ids[id] != id) {
